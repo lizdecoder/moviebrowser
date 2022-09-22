@@ -5,13 +5,6 @@ const Navbar = ({ searchText, setSearchText }) => {
   const history = useHistory();
   const searchRef = useRef(searchText)
 
-  //code for updating within searchbar, not button
-  // const updateSearchText = (e) => {
-  //   history.push("/search");
-  //   setSearchText(e.target.value);
-  // };
-
-
   const handleSearch = () => {
     history.push("/search");
     const searchedItem = searchRef.current.value
@@ -60,9 +53,6 @@ const Navbar = ({ searchText, setSearchText }) => {
               type="search"
               placeholder="Search"
               aria-label="Search"
-              //code: to update in search field
-              // value={searchText}
-              // onChange={updateSearchText}
               ref={searchRef}
             />
             <button className="btn btn-outline-success" type="button" onClick={handleSearch}> 
